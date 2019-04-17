@@ -1,4 +1,4 @@
-package com.test.product.structureMode.adapter.classAdapter;
+package com.test.product.structureMode.adapter.objectAdapter;
 
 /**
  * @Author: lijl
