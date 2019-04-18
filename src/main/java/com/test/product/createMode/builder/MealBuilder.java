@@ -2,7 +2,7 @@ package com.test.product.createMode.builder;
 
 /**
  * @Author: lijl
- * @Description:
+ * @Description: 套餐种类
  * @Date: Crated in 14:30 2019-04-17
  * @Modify By:
  */
