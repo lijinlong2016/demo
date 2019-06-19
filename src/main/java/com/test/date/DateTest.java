@@ -26,7 +26,7 @@ public class DateTest {
         System.out.println(user.getBirthday());
         Date birthday = user.getBirthday();
         //这里可以看到，user对象的birthday属性被修改掉了。这也是Date对象的弊端所在，我们可以通过改写getter方法，使它返回一个新的Date对象即可解决
-        birthday.setTime(111122221111L);
+        birthday.setTime(11111111L);
         System.out.println(user.getBirthday());
     }
 
