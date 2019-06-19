@@ -13,29 +13,26 @@ public class CountDownLatchTest {
     private static CountDownLatch latch = new CountDownLatch(3);
 
     public static void main(String[] args) throws InterruptedException {
-        new Thread() {
-            public void run() {
-                fatherToRes();
-                latch.countDown();
-            };
-        }.start();
-        new Thread() {
-            public void run() {
-                try {
-                    Thread.sleep(10000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                motherToRes();
-                latch.countDown();
-            };
-        }.start();
-        new Thread() {
-            public void run() {
-                meToRes();
-                latch.countDown();
-            };
-        }.start();
+        new Thread(() -> {
+            fatherToRes();
+            latch.countDown();
+            System.out.println("爸爸到了玩手机，等人齐");
+        }).start();
+        new Thread(() -> {
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            motherToRes();
+            latch.countDown();
+            System.out.println("妈妈到了玩手机，等人齐");
+        }).start();
+        new Thread(() -> {
+            meToRes();
+            latch.countDown();
+            System.out.println("我到了玩手机，等人齐");
+        }).start();
         latch.await();
 
         togetherToEat();

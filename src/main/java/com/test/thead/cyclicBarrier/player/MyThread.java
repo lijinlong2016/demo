@@ -28,6 +28,7 @@ public class MyThread extends Thread {
             System.out.println(name + "准备完毕！等待发令枪");
             try {
                 cyclicBarrier.await();
+                System.out.println(name+" 听到发令枪开始跑");
             } catch (BrokenBarrierException e) {
                 e.printStackTrace();
             }
