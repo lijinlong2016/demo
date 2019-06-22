@@ -1,4 +1,4 @@
-package com.test.future;
+package com.test.thead.future;
 
 import java.util.Random;
 import java.util.concurrent.*;
@@ -28,9 +28,10 @@ public class testCallable {
      * @throws InterruptedException
      */
     public static void completionServiceCount() throws InterruptedException, ExecutionException {
+        LinkedBlockingQueue<Future<Integer>> completionQueue = new LinkedBlockingQueue<Future<Integer>>();
         ExecutorService executorService = Executors.newCachedThreadPool();
         CompletionService<Integer> completionService = new ExecutorCompletionService<Integer>(
-                executorService);
+                executorService,completionQueue);
         int threadNum = 5;
         for (int i = 0; i < threadNum; i++) {
             completionService.submit(getTask(i));

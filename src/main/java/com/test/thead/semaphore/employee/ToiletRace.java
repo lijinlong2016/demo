@@ -6,7 +6,7 @@ import java.util.concurrent.Semaphore;
 
 /**
  * @Author: lijl
- * @Description:
+ * @Description:   30个人上厕所，厕所最多容纳10个人
  * @Date: Crated in 14:16 2019-06-19
  * @Modify By:
  */
