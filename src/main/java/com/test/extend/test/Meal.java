@@ -11,5 +11,6 @@ public class Meal {
     Meal() {
         System.out.println("Meal()");
     }
+
     public Bread bread = new Bread();
 }

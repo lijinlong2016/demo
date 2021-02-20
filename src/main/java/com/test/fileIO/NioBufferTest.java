@@ -14,21 +14,22 @@ public class NioBufferTest {
 
     /**
      * 容量Capacity
-     *
+     * <p>
      * 缓冲区能够容纳的数据元素的最大数量。容量在缓冲区创建时被设定，并且永远不能被改变。(不能被改变的原因也很简单，底层是数组嘛)
-     *
-     *
+     * <p>
+     * <p>
      * 上界Limit
-     *
+     * <p>
      * 缓冲区里的数据的总数，代表了当前缓冲区中一共有多少数据。
-     *
-     *
+     * <p>
+     * <p>
      * 位置Position
-     *
+     * <p>
      * 下一个要被读或写的元素的位置。Position会自动由相应的 get( )和 put( )函数更新。
-     *
-     *
+     * <p>
+     * <p>
      * 标记Mark :一个备忘位置。用于记录上一次读写的位置。
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -37,9 +38,9 @@ public class NioBufferTest {
         ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
 
         // 看一下初始时4个核心变量的值
-        System.out.println("初始时-->capacity--->"+byteBuffer.capacity());
-        System.out.println("初始时-->limit--->"+byteBuffer.limit());
-        System.out.println("初始时-->position--->"+byteBuffer.position());
+        System.out.println("初始时-->capacity--->" + byteBuffer.capacity());
+        System.out.println("初始时-->limit--->" + byteBuffer.limit());
+        System.out.println("初始时-->position--->" + byteBuffer.position());
         System.out.println("初始时-->mark--->" + byteBuffer.mark());
 
         System.out.println("--------------------------------------");
@@ -49,9 +50,9 @@ public class NioBufferTest {
         byteBuffer.put(s.getBytes());
 
         // 看一下初始时4个核心变量的值
-        System.out.println("put完之后-->capacity--->"+byteBuffer.capacity());
-        System.out.println("put完之后-->limit--->"+byteBuffer.limit());
-        System.out.println("put完之后-->position--->"+byteBuffer.position());
+        System.out.println("put完之后-->capacity--->" + byteBuffer.capacity());
+        System.out.println("put完之后-->limit--->" + byteBuffer.limit());
+        System.out.println("put完之后-->position--->" + byteBuffer.position());
         System.out.println("put完之后-->mark--->" + byteBuffer.mark());
 
         System.out.println("--------------------------------------");
@@ -61,9 +62,9 @@ public class NioBufferTest {
         System.out.println(flip);
 
         // 看一下初始时4个核心变量的值
-        System.out.println("put完之后-->capacity--->"+byteBuffer.capacity());
-        System.out.println("put完之后-->limit--->"+byteBuffer.limit());
-        System.out.println("put完之后-->position--->"+byteBuffer.position());
+        System.out.println("put完之后-->capacity--->" + byteBuffer.capacity());
+        System.out.println("put完之后-->limit--->" + byteBuffer.limit());
+        System.out.println("put完之后-->position--->" + byteBuffer.position());
         System.out.println("put完之后-->mark--->" + byteBuffer.mark());
 
         System.out.println("--------------------------------------");
@@ -77,9 +78,9 @@ public class NioBufferTest {
         // 输出数据
         System.out.println(new String(bytes, 0, bytes.length));
         // 看一下初始时4个核心变量的值
-        System.out.println("put完之后-->capacity--->"+byteBuffer.capacity());
-        System.out.println("put完之后-->limit--->"+byteBuffer.limit());
-        System.out.println("put完之后-->position--->"+byteBuffer.position());
+        System.out.println("put完之后-->capacity--->" + byteBuffer.capacity());
+        System.out.println("put完之后-->limit--->" + byteBuffer.limit());
+        System.out.println("put完之后-->position--->" + byteBuffer.position());
         System.out.println("put完之后-->mark--->" + byteBuffer.mark());
 
         System.out.println("--------------------------------------");
@@ -87,9 +88,9 @@ public class NioBufferTest {
         //读完后，清理重新写入
         byteBuffer.clear();
         // 看一下初始时4个核心变量的值
-        System.out.println("put完之后-->capacity--->"+byteBuffer.capacity());
-        System.out.println("put完之后-->limit--->"+byteBuffer.limit());
-        System.out.println("put完之后-->position--->"+byteBuffer.position());
+        System.out.println("put完之后-->capacity--->" + byteBuffer.capacity());
+        System.out.println("put完之后-->limit--->" + byteBuffer.limit());
+        System.out.println("put完之后-->position--->" + byteBuffer.position());
         System.out.println("put完之后-->mark--->" + byteBuffer.mark());
 
     }

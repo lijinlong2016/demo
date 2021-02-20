@@ -11,7 +11,6 @@ import sun.jvm.hotspot.oops.BranchData;
 public class Sandwich extends ProtableLunch {
 
 
-
     public Sandwich() {
         System.out.println("Sandwich()");
 

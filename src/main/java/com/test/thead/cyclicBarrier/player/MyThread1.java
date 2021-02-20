@@ -5,44 +5,44 @@ import java.util.concurrent.CyclicBarrier;
 
 /**
  * @Author: lijl
- * @Description:  Barrier被破坏
+ * @Description: Barrier被破坏
  * @Date: Crated in 14:00 2019-06-19
  * @Modify By:
  */
-public class MyThread1 extends Thread{
+public class MyThread1 extends Thread {
 
     private CyclicBarrier cyclicBarrier;
     private String name;
     private int ID;
 
-    public MyThread1(CyclicBarrier cyclicBarrier, String name,int ID) {
+    public MyThread1(CyclicBarrier cyclicBarrier, String name, int ID) {
         super();
         this.cyclicBarrier = cyclicBarrier;
         this.name = name;
-        this.ID=ID;
+        this.ID = ID;
 
     }
+
     @Override
     public void run() {
         System.out.println(name + "开始准备");
         try {
-            Thread.sleep(ID*1000);  //不同运动员准备时间不一样，方便模拟不同情况
+            Thread.sleep(ID * 1000);  //不同运动员准备时间不一样，方便模拟不同情况
             System.out.println(name + "准备完毕！在起跑线等待发令枪");
             try {
                 cyclicBarrier.await();
                 System.out.println(name + "跑完了路程！");
             } catch (BrokenBarrierException e) {
                 e.printStackTrace();
-                System.out.println(name+"看不见起跑线了");
+                System.out.println(name + "看不见起跑线了");
             }
-            System.out.println(name+"退场！");
+            System.out.println(name + "退场！");
         } catch (InterruptedException e) {
 
             e.printStackTrace();
         }
 
     }
-
 
 
     public static void main(String[] args) throws InterruptedException {

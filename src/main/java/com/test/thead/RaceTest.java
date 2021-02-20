@@ -17,6 +17,7 @@ public class RaceTest {
      * 1、线程先执行，if后执行。无输出
      * 2、if先执行，线程后执行。输出0
      * 3、if先执行，线程执行，输出在执行。输出1
+     *
      * @param args
      */
     public static void main(String[] args) {

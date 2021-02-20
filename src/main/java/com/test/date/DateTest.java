@@ -11,10 +11,8 @@ import java.util.Date;
 
 /**
  * @Author: lijl
- * @Description:
- * 在阿里巴巴规约手册里，强制规定SimpleDateFormat是线程不安全的类，当定义为静态变量时，必须加锁处理。
+ * @Description: 在阿里巴巴规约手册里，强制规定SimpleDateFormat是线程不安全的类，当定义为静态变量时，必须加锁处理。
  * 忽略线程安全问题，正是大多数Java初学者在进行时间转化时容易踩坑的点。
- *
  * @Date: Crated in 10:27 2019-06-18
  * @Modify By:
  */
@@ -51,7 +49,7 @@ public class DateTest {
         LocalDateTime dateTime = LocalDateTime.ofInstant(instant, ZoneId.of("+8"));
         System.out.println(dateTime);
 
-        instant = Instant.ofEpochSecond(System.currentTimeMillis()/1000);
+        instant = Instant.ofEpochSecond(System.currentTimeMillis() / 1000);
         //+8意思是东八区
         dateTime = LocalDateTime.ofInstant(instant, ZoneId.of("+8"));
         System.out.println(dateTime);
@@ -97,12 +95,6 @@ public class DateTest {
         long epochSecond = dateTime.toInstant(ZoneOffset.of("+8")).getEpochSecond();
         System.out.println(epochSecond);
     }
-
-
-
-
-
-
 
 
 }

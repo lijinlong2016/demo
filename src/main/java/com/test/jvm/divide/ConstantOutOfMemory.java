@@ -13,7 +13,7 @@ public class ConstantOutOfMemory {
 
     public static void main(String[] args) throws Exception {
         try {
-            List<String> strings = new ArrayList<String>();
+            List<String> strings = new ArrayList<>();
             int i = 0;
             while (true) {
                 strings.add(String.valueOf(i++).intern());

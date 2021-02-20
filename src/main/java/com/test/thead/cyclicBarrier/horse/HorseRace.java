@@ -21,7 +21,6 @@ public class HorseRace {
     private CyclicBarrier barrier;
 
     /**
-     *
      * @param nHorses 几匹马（几个线程）
      * @param pause   每走完一轮，暂停一小会输出
      */

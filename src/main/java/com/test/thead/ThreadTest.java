@@ -13,7 +13,7 @@ public class ThreadTest {
         /**
          * Thread的匿名子类
          */
-        Thread thread = new Thread(){
+        Thread thread = new Thread() {
             @Override
             public void run() {
                 System.out.println("Thread running");

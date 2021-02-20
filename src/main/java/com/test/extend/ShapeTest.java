@@ -19,8 +19,6 @@ public class ShapeTest {
         doSomeThings(shape);
 
 
-
-
     }
 
 

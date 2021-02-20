@@ -28,7 +28,7 @@ public class DeadLoad {
                 }
 
             }
-        },"线程1").start();
+        }, "线程1").start();
 
 
         new Thread(() -> {
@@ -44,6 +44,6 @@ public class DeadLoad {
                 }
 
             }
-        },"线程2").start();
+        }, "线程2").start();
     }
 }

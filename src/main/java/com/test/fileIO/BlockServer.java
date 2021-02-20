@@ -11,7 +11,7 @@ import java.nio.file.StandardOpenOption;
 
 /**
  * @Author: lijl
- * @Description:  阻塞形态
+ * @Description: 阻塞形态
  * @Date: Crated in 15:47 2019-06-12
  * @Modify By:
  */
